@@ -88,7 +88,7 @@ public class OrderServlet extends HttpServlet {
             e.printStackTrace();
         }
         //重新定向,是客户端跳转
-        response.sendRedirect("/OrderServlet?method=list");
+        response.sendRedirect(request.getContextPath()+"/OrderServlet?method=list");
     }
 
     /**

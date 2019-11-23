@@ -10,10 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>修改密码</title>
-    <link rel="stylesheet" href="../../../view/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../../view/css/mybs.css" />
-    <script type="text/javascript" src="../../../view/js/jquery-1.10.2.min.js" ></script>
-    <script type="text/javascript" src="../../../view/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/mybs.css" />
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/bootstrap.min.js" ></script>
     <script type="text/javascript">
         function checkPass() {
             var old_pass = document.mainForm.old_pass.value;
@@ -51,7 +51,7 @@
 <body>
 <div class="container">
     <h1 class="page-header">修改密码</h1>
-    <form action="/UserServlet?method=update_pass" name="mainForm" class="form-horizontal" method="post">
+    <form action="<%=request.getContextPath()%>/UserServlet?method=update_pass" name="mainForm" class="form-horizontal" method="post">
         <div class="form-group">
             <div class="col-md-4">
                 <input type="password" name="old_pass" class="form-control" placeholder="原密码" />

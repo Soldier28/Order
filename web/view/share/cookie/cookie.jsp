@@ -21,5 +21,5 @@
     if (!username_password.equals("")) {
         String[] up = username_password.split(" ");
     %>
-    <jsp:forward page="../../orders/orderManager/list.jsp"></jsp:forward>
+    <jsp:forward page="<%=request.getContextPath()%>/orders/orderManager/list.jsp"></jsp:forward>
 <%}%>

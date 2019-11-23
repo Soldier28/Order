@@ -17,7 +17,7 @@
 <div align="center">
     <table>
         <tr>
-            <td><img src="../../images/img1.jpg"></td>
+            <td><img src="<%=request.getContextPath()%>/view/images/img1.jpg"></td>
             <td>
                 用户名或密码错误，3秒后自动转到登录页面！<<br>
                 若没有自动跳转请单击以下连接！<<br>

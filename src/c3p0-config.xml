@@ -4,7 +4,7 @@
     <named-config name="dbInfo">
         <!-- 配置用户名密码、连接、驱动 -->
         <property name="user">root</property>
-        <property name="password">root</property>
+        <property name="password">123456</property>
         <property name="jdbcUrl">jdbc:mysql://localhost:3306/orders</property>
         <property name="driverClass">com.mysql.jdbc.Driver</property>
 

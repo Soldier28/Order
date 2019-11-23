@@ -9,23 +9,23 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <link rel="stylesheet" href="../../../view/css/bootstrap.min.css" />
-    <script type="text/javascript" src="../../../view/js/jquery-1.10.2.min.js" ></script>
-    <script type="text/javascript" src="../../../view/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/bootstrap.min.css" />
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/bootstrap.min.js" ></script>
     <meta charset="UTF-8">
     <title>订单列表</title>
 
     <script language="JavaScript">
         function doView(orderId) {
-            document.mainForm.action = "/OrderItemServlet?method=item&orderId="+orderId;
+            document.mainForm.action = "<%=request.getContextPath()%>/OrderItemServlet?method=item&orderId="+orderId;
             document.mainForm.submit();
         }
         function doDelete(orderId) {
-            document.mainForm.action = "/OrderServlet?method=delete&orderId="+orderId;
+            document.mainForm.action = "<%=request.getContextPath()%>/OrderServlet?method=delete&orderId="+orderId;
             document.mainForm.submit();
         }
         function showAll() {
-            window.location.href = "/OrderServlet?method=list";
+            window.location.href = "<%=request.getContextPath()%>/OrderServlet?method=list";
         }
     </script>
 </head>
@@ -35,15 +35,15 @@
     <table align="center" bgcolor="black" cellpadding="5" cellspacing="1" border="1" width="700px">
         <tr bgcolor="white">
             <td colspan="5" style="text-align: center">
-                欢迎你&nbsp;&nbsp;[${sessionScope.user.userName}]&nbsp;|<a href="../../../view/orders/userManager/set_pass.jsp">[修改密码]</a>
-                &nbsp;|&nbsp;<a href="LogoutServlet">[ <span title="退出系统" class="glyphicon glyphicon-off"></span> ]</a>
+                欢迎你&nbsp;&nbsp;[${sessionScope.user.userName}]&nbsp;|<a href="<%=request.getContextPath()%>/view/orders/userManager/set_pass.jsp">[修改密码]</a>
+                &nbsp;|&nbsp;<a href="<%=request.getContextPath()%>/LogoutServlet">[ <span title="退出系统" class="glyphicon glyphicon-off"></span> ]</a>
             </td>
             <td colspan="2" style="text-align: center">
                 <input type="button" value="显示全部" onclick="showAll()">
                 &nbsp;&nbsp;
-                <input type="button" value="查询" onclick="document.location.href='../../../view/orders/orderManager/search.jsp'">
+                <input type="button" value="查询" onclick="document.location.href='<%=request.getContextPath()%>/view/orders/orderManager/search.jsp'">
                 &nbsp;&nbsp;
-                <input type="button" value="新增" onclick="document.location.href='../../../view/orders/orderManager/new.jsp'">
+                <input type="button" value="新增" onclick="document.location.href='<%=request.getContextPath()%>/view/orders/orderManager/new.jsp'">
             </td>
         </tr>
         <tr bgcolor="white">

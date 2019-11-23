@@ -30,5 +30,5 @@ public interface IOrderDAO {
     public List<Order> search(String userName, String ordercode, Double sum, String deliverymethod) throws Exception;
 
     //根据用户名查询
-    public List<Order> findByBuyer (String username) throws Exception;
+    public List<Order> findByBuyer(String username) throws Exception;
 }

@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>查看/修改订单明细</title>
-    <script type="text/javascript" src="../../../view/js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/jquery-1.10.2.min.js" ></script>
     <script type="text/javascript">
         //window.onload: 页面加载完成
         window.onload = function () {
@@ -53,7 +53,7 @@
                 var promotionPrice = eval("document.mainForm.promotionPrice.value");
                 document.mainForm.sum.value = (unitNum - promotionNum)* unitPrice + promotionNum * promotionPrice;
             }
-            document.mainForm.action = "/OrderItemServlet?method=update";
+            document.mainForm.action = "<%=request.getContextPath()%>/OrderItemServlet?method=update";
             document.mainForm.submit();
         }
     </script>

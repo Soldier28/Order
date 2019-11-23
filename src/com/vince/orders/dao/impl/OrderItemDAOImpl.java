@@ -28,7 +28,7 @@ public class OrderItemDAOImpl implements IOrderItemDAO {
         ResultSet rs = null;
         List<OrderItem> orderItems = new ArrayList<OrderItem>();
         OrderItem orderItem = null;
-        String sql = "select * from OrderItem where orderid=? ";
+        String sql = "select * from orderItem where orderId=? ";
         try {
             conn = DBUtils.getConnection();
             ps = conn.prepareStatement(sql);

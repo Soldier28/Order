@@ -81,7 +81,7 @@ public class OrderDAOImpl implements IOrderDAO {
         ResultSet rs = null;
         Double sum = 0.0;
         //用sum函数把所有订单明细的总金额相加，再用s表示出来
-        String sql1 = "select sum(sum) as s from orderitem where orderid=?";
+        String sql1 = "select sum(sum) as s from orderItem where orderid=?";
         String sql2 = "update torder set Sum=? where orderid=?";
         try {
             conn = DBUtils.getConnection();

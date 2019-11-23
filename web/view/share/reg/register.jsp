@@ -10,10 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <title>用户注册</title>
-    <link rel="stylesheet" href="../../../view/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../../view/css/mybs.css" />
-    <script type="text/javascript" src="../../../view/js/jquery-1.10.2.min.js" ></script>
-    <script type="text/javascript" src="../../../view/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/mybs.css" />
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/bootstrap.min.js" ></script>
     <script type="text/javascript">
         function username_change() {
             var _username = document.mainForm.username.value;
@@ -42,7 +42,7 @@
 <body>
 <div class="container">
     <h1 class="page-header"><span class="glyphicon glyphicon-user"></span> 用户注册</h1>
-    <form action="/UserServlet?method=register" name="mainForm" class="form-horizontal" method="post">
+    <form action="${pageContext.request.contextPath}/UserServlet?method=register" name="mainForm" class="form-horizontal" method="post">
         <div class="form-group">
             <div class="col-md-4">
                 <input type="text" name="username" class="form-control" placeholder="用户名/Email" onmouseout="username_change()" />

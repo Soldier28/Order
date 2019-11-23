@@ -67,7 +67,7 @@
     </script>
 </head>
 <body>
-<form name="mainForm" action="/OrderItemServlet?method=add" method="post">
+<form name="mainForm" action="<%=request.getContextPath()%>/OrderItemServlet?method=add" method="post">
     <div style="text-align: center"><h2>新增订单明细</h2></div>
     <table align="center" bgcolor="black" cellpadding="5" cellspacing="1" border="0" width="700px">
         <tr bgcolor="white">

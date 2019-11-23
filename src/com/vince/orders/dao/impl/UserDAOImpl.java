@@ -58,7 +58,7 @@ public class UserDAOImpl implements IUserDAO {
         PreparedStatement ps = null;
         ResultSet rs = null;
         User user = null;
-        String sql = "select * from user where username=? and password=? ";
+        String sql = "select * from user where userid=? and password=? ";
         try {
             conn = DBUtils.getConnection();
             ps = conn.prepareStatement(sql);

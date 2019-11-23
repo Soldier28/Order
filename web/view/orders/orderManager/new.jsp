@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>新增订单</title>
-    <script type="text/javascript" src="../../../view/js/util.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/util.js"></script>
     <script language="JavaScript">
         function doAdd() {
             var _orderCode = document.mainForm.orderCode.value;
@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-<form action="/OrderServlet?method=add" name="mainForm" method="post">
+<form action="${pageContext.request.contextPath}/OrderServlet?method=add" name="mainForm" method="post">
     <div style="text-align: center"><h2>新增订单</h2></div>
     <table align="center" bgcolor="black" cellpadding="5" cellspacing="1" border="0" width="700px">
         <tr bgcolor="white">

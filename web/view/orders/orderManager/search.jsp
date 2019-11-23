@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<form action="/OrderServlet?method=search" method="post" name="mainForm">
+<form action="<%=request.getContextPath()%>/OrderServlet?method=search" method="post" name="mainForm">
     <div style="text-align: center"><h2>订单查询</h2></div>
     <table align="center" bgcolor="black" cellpadding="5" cellspacing="1" border="0" width="700px">
         <tr bgcolor="white">

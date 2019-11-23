@@ -11,15 +11,15 @@
     <meta charset="UTF-8">
     <title>用户登录</title>
     <!-- 一个“../”是返回当前文件所在文件夹的上一层目录 -->
-    <link rel="stylesheet" href="../../../view/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../../view/css/mybs.css" />
-    <script type="text/javascript" src="../../../view/js/jquery-1.10.2.min.js" ></script>
-    <script type="text/javascript" src="../../../view/js/bootstrap.min.js" ></script>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/view/css/mybs.css" />
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/jquery-1.10.2.min.js" ></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/view/js/bootstrap.min.js" ></script>
 </head>
 <body>
     <div class="container">
         <h1 class="page-header"><span class="glyphicon glyphicon-user"></span> 用户登录</h1>
-        <form action="/LoginServlet" name="mainForm" class="form-horizontal" method="post">
+        <form action="${pageContext.request.contextPath}/LoginServlet" name="mainForm" class="form-horizontal" method="post">
             <div class="form-group">
                 <div class="col-md-4">
                     <input type="text" name="username" class="form-control" placeholder="用户名/Email" />
